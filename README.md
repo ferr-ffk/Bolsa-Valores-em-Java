@@ -15,7 +15,7 @@ Este projeto simula a bolsa de valores, com todos os aspectos de compra e venda 
 ## 🧍 Autores
 
 | Integrante               | Funcionalidade       |
-|--------------------------|----------------------|
+|:------------------------:|:--------------------:|
 | Fernando Freitas de Lira | Classes de modelo    |
 | Davi Gomes de Sousa      | Classes de utilidade |
 
@@ -25,13 +25,17 @@ Este projeto simula a bolsa de valores, com todos os aspectos de compra e venda 
 * Eclipse IDE
 * IntellijIdea
 
----
+## 🚀 Datasets
+
+1. Os dados de empresas e informações adicionais foram retirados do [site oficial da B3](https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/consultas/boletim-diario/dados-publicos-de-produtos-listados-e-de-balcao/).
+
+1. A estrutura de um ativo pode ser encontrada no [site da bolsa de valores de São Paulo](https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/acoes.htm).
+
+1. As empresas [listadas na B3](https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm).
 
 ## 🧰 Funcionalidades
 
 O sistema possui modos de compra e ordem de uma ação de uma empresa tal cadastrada no sistema de arquivos.
-
----
 
 ## 🏃‍♀️: O que foi feito até agora?
 
