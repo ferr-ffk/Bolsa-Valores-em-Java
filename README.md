@@ -6,6 +6,7 @@ _Prof° Ugo Henrique Cardoso_
 ![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?style=for-the-badge&logo=Eclipse&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
 </div>
 
@@ -28,6 +29,8 @@ Este projeto simula a bolsa de valores, com todos os aspectos de compra e venda 
 
 ## 🧰 Funcionalidades
 
+O sistema possui modos de compra e ordem de uma ação de uma empresa tal cadastrada no sistema de arquivos.
+
 ---
 
 ## 🏃‍♀️: O que foi feito até agora?
@@ -35,4 +38,4 @@ Este projeto simula a bolsa de valores, com todos os aspectos de compra e venda 
 - [X] Implementação das entidades de modelo
 - [ ] Implementação das classes de utilidades como Fila, Pilha e Árvore
 - [X] Armazenamento das ordens de compra e venda em arquivos ```.txt```
-- [ ] 
+- [ ] Geração de relatórios
