@@ -2,13 +2,13 @@ package util;
 
 import java.util.Arrays;
 
-public class VetorEstatico<T> {
+public class Vetor<T> {
 
 	private int tamanho;
 	private int capacidade;
 	private Object[] elementos;
 
-	public VetorEstatico(int capacidade) {
+	public Vetor(int capacidade) {
 		if (0 > capacidade) {
 			throw new RuntimeException("A capacidade do vetor não pode ser menor que zero!");
 		}
