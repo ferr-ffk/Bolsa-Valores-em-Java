@@ -37,7 +37,7 @@ Este projeto simula a bolsa de valores, com todos os aspectos de compra e venda 
 
 O sistema possui modos de compra e ordem de uma ação de uma empresa tal cadastrada no sistema de arquivos.
 
-## 🏃‍♀️: O que foi feito até agora?
+## 🏃‍♀️ O que foi feito até agora?
 
 - [X] Implementação das entidades de modelo
 - [ ] Implementação das classes de utilidades como Fila, Pilha e Árvore
