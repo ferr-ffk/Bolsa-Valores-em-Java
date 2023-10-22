@@ -4,13 +4,13 @@ public abstract class AbstratoAcao {
 
 	protected String nome;
 
-	protected Double valor;
+	protected float valor;
 
-	protected Double valorEntrada;
+	protected float valorEntrada;
 
-	protected Double valorFechado;
+	protected float valorFechado;
 
-	public AbstratoAcao(String nome, Double valor, Double valorEntrada, Double valorFechado) {
+	public AbstratoAcao(String nome, float valor, float valorEntrada, float valorFechado) {
 		super();
 		this.nome = nome;
 		this.valor = valor;
@@ -20,7 +20,7 @@ public abstract class AbstratoAcao {
 
 	public abstract double calcularValor();
 	
-	public Double getValor() {
+	public float getValor() {
 		return valor;
 	}
 	

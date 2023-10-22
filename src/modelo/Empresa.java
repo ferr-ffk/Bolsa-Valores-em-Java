@@ -7,6 +7,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * <p> Uma empresa registrada na bolsa de valores terá componentes básicos de nome, e código. Além de contar
+ * com o número de cotas e o valor delas.
+ */
 public class Empresa {
 
 	private int id;
@@ -16,20 +20,62 @@ public class Empresa {
 	private final String nome;
 
 	private int cotas;
+	
+	private float valorCota;
 
 	private String codigo;
+	
+	private TipoAcaoEmpresa tipoAcaoEmpresa;
 
 	private static final String EMPRESAS_TXT = "Empresas.txt";
 
-	public Empresa(String nome, String codigo, int cotas) {
+	/**
+	 * Instancia uma nova empresa e logo registra ela no arquivo de texto.
+	 * 
+	 * @param nome O nome da empresa
+	 * @param codigo O código da empresa na bolsa de valores
+	 * @param cotas O número de cotas da empresa
+	 * @param valorCota O valor de cada cota individual da empresa
+	 */
+	public Empresa(String nome, String codigo, int cotas, float valorCota, TipoAcaoEmpresa tipoAcaoEmpresa) {
 		this.nome = nome;
 		if (cotas <= 0) {
 			throw new RuntimeException("O numero de cotas da empresa não pode ser inferior a zero!");
 		}
 		this.codigo = codigo;
 		this.cotas = cotas;
+		this.valorCota = valorCota;
+		this.tipoAcaoEmpresa = tipoAcaoEmpresa;
 
 		registrarEmpresa(this);
+	}
+	
+	public int obterNumeroCotas() {
+		return this.cotas;
+	}
+	
+	public float obterValorEmpresa() {
+		return this.cotas * valorCota;
+	}
+	
+	/**
+	 * <p> O método utilizado para uma eventual ordem de compra de ações dessa empresa.
+	 * <p> Cada empresa possui um número de ações (cotas), além de retirar uma cota dela.
+	 * 
+	 * @return uma acao da empresa
+	 */
+	public AbstratoAcao obterAcao() {
+		comprarCotas(cotas);
+		
+		if(tipoAcaoEmpresa == TipoAcaoEmpresa.ACAO_FII) {
+
+			return new AcaoFII("Acao FII", this.valorCota, 0.0f, 0.0f, cotas);
+		} else if(tipoAcaoEmpresa == TipoAcaoEmpresa.ACAO_MERCADO) {
+			
+			return new AcaoMercado("Acao Mercado", this.valorCota, this.cotas, this);
+		} else {
+			throw new RuntimeException("Tipo de Acao da empresa nulo!");
+		}
 	}
 
 	private void registrarEmpresa(Empresa empresa) {
@@ -72,6 +118,9 @@ public class Empresa {
 		return nome;
 	}
 
+	/**
+	 * Exibe todas as empresas registradas.
+	 */
 	public static void exibirEmpresas() {
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(new File(EMPRESAS_TXT)));
@@ -96,6 +145,6 @@ public class Empresa {
 
 	@Override
 	public String toString() {
-		return id + ": {Empresa: " + nome + " \"" + codigo + "\", total de cotas: " + cotas + "}";
+		return id + ": {Empresa: " + nome + " \"" + codigo + "\", total de cotas: " + cotas + ", valor da empresa: " + obterValorEmpresa() + "}";
 	}
 }

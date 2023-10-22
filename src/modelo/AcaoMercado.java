@@ -6,8 +6,8 @@ public class AcaoMercado extends AbstratoAcao {
 	
 	private Empresa empresa;
 	
-	public AcaoMercado(String nome, Double valor, int cotas, Empresa empresa) {
-		super(nome, valor, 0.0, 0.0);
+	public AcaoMercado(String nome, float valor, int cotas, Empresa empresa) {
+		super(nome, valor, 0.0f, 0.0f);
 	
 		if(empresa == null) {
 			throw new RuntimeException("Valor para empresa inválido: " + empresa);

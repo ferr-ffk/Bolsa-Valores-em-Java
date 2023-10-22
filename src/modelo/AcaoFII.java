@@ -4,7 +4,7 @@ public class AcaoFII extends AbstratoAcao {
 
 	private double cotas;
 
-	public AcaoFII(String nome, Double valor, Double valorEntrada, Double valorFechado, int cotas) {
+	public AcaoFII(String nome, float valor, float valorEntrada, float valorFechado, int cotas) {
 		super(nome, valor, valorEntrada, valorFechado);
 		this.cotas = cotas;
 	}

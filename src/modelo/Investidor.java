@@ -1,7 +1,11 @@
 package modelo;
 
-import util.Fila;
-
+/**
+ * A classe correspondente a um investidor qualquer na bolsa. Possui um saldo
+ * para compra e uma lista de carteira de ações para compra.
+ * 
+ * @author Fernando Freitas, Davi Gomes
+ */
 public class Investidor {
 
 	private Integer codigo;
@@ -12,6 +16,13 @@ public class Investidor {
 
 	private CarteiraDeAcoes carteiraDeAcoes;
 
+	/**
+	 * Instancia um novo investidor na bolsa.
+	 * 
+	 * @param codigo O código de investidor
+	 * @param nome   O nome do investidor
+	 * @param saldo  O saldo na carteira
+	 */
 	public Investidor(Integer codigo, String nome, double saldo) {
 		this.codigo = codigo;
 		this.nome = nome;
@@ -26,6 +37,10 @@ public class Investidor {
 
 		this.carteiraDeAcoes.adicionarAcao(ap);
 		this.saldo -= ap.calcularValor();
+	}
+	
+	public AbstratoAcao removerUltimoPapel() {
+		return carteiraDeAcoes.removerUltimaAcao();
 	}
 
 	@Override

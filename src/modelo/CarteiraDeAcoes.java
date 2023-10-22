@@ -14,6 +14,10 @@ public class CarteiraDeAcoes {
 		acoes.adicionar(a);
 	}
 	
+	public AbstratoAcao removerUltimaAcao() {
+		return acoes.remover();
+	}
+	
 	@Override
 	public String toString() {
 		return acoes.toString();

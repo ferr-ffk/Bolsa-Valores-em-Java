@@ -11,13 +11,12 @@ package util;
  */
 public class Pilha<T> {
 
-	@SuppressWarnings("hiding")
-	class Celula<T> {
-		T coisa;
+	class Celula<K> {
+		K coisa;
 
-		Celula<T> proximo;
+		Celula<K> proximo;
 
-		Celula(T coisa) {
+		Celula(K coisa) {
 			this.coisa = coisa;
 			this.proximo = null;
 		}

@@ -111,7 +111,7 @@ public class Fila<T> {
 	}
 
 	/**
-	 * Remove e remove da fila o último elemento
+	 * Remove e retorna da fila o último elemento
 	 * 
 	 * @return O útimo elemento
 	 */
@@ -125,7 +125,7 @@ public class Fila<T> {
 
 		return primeiro.coisa;
 	}
-
+	
 	public T get(int indice) {
 		Celula<T> atual = this.primeiro;
 

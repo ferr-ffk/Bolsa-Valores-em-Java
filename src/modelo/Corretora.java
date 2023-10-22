@@ -6,23 +6,55 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Date;
 
 import util.Pilha;
 
+/**
+ * <p>
+ * A classe corretora representa uma empresa responsável por enviar ordens de
+ * compra e venda entre um investidor e a empresa vendendo as cotas.
+ * 
+ * 
+ * @author Fernando Freitas, Davi Gomes
+ */
 public class Corretora {
+
+	private String nome;
+
+	private Integer codigo;
 
 	private static final String HISTORICO_ORDENS_TXT = "HistoricoOrdens.txt";
 
 	private BufferedReader reader;
 
 	private Pilha<String> ordensEfetuadas = new Pilha<>();
-	
+
 	private static int idBase = 0;
 
-	public Corretora() {
+	/**
+	 * Instancia uma nova corretora na bolsa de valores.
+	 * 
+	 * @param nome   O nome da corretora
+	 * @param codigo O código da corretora
+	 */
+	public Corretora(String nome, Integer codigo) {
+		this.nome = nome;
+		this.codigo = codigo;
 	}
 
-	public void enviarOrdem(AbstratoAcao a, Investidor i) {
+	/**
+	 * Realiza a ordem de compra para o investidor, além de registrar no arquivo de
+	 * texto. Para total segurança, certifica que o investidor tem poder de compra e
+	 * depois adiciona em sua carteira de ações. Posteriormente subtrai da empresa
+	 * uma cota.
+	 * 
+	 * 
+	 * @param a A ação a ser comprada pelo investidor
+	 * @param i O investidor realizando o papel de comprador
+	 * @param emp A empresa a vender a cota
+	 */
+	public void enviarOrdem(AbstratoAcao a, Investidor i, Empresa emp) {
 		i.adicionarPapel(a);
 
 		try {
@@ -46,7 +78,7 @@ public class Corretora {
 				id = idBase++;
 			}
 
-			String ordem = id + ": Ordem " + ": " + a + " enviada para " + i;
+			String ordem = id + ": Ordem da empresa " + emp + " realizada por " + nome + ": " + a + " enviada para " + i + " às" + new Date();
 			ordensEfetuadas.empilhar(ordem);
 
 			writer.write("\n" + ordem);
@@ -57,7 +89,7 @@ public class Corretora {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void removerUltimaOrdem() {
 		String ultimaOrdem = ordensEfetuadas.desempilhar();
 		System.out.println(ultimaOrdem + " removida com sucesso");
@@ -87,4 +119,13 @@ public class Corretora {
 
 		}
 	}
+
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
+
 }
