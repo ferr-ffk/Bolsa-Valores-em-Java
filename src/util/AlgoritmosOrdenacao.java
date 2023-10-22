@@ -104,7 +104,6 @@ public class BubbleSort {
 		}
 	}
 
-
 	public static void heapSort(int[] arr) {
 		int n = arr.length;
 		// Build max heap
@@ -169,4 +168,5 @@ public class BubbleSort {
 		return i + 1;
 	}
 
+	}
 }
