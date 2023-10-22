@@ -41,9 +41,23 @@ A empresa possui nome popular e código na bolsa de valores, retirados do site o
 
 O sistema possui uma biblioteca personalizada de estruturas de dados como Fila, Pilha e Árvore, todas com estratégia encadeada de armazenamento. A classe fila é utilizada para armazenamento de cada papel comprado por um investidor, em sua carteira pessoal; como a pilha é usada para registrar as empresas no ramo de negócios.
 
-## Instalação
+## Instalação e uso
 
-O sistema possui estrutura de arquivos simples para fácil uso. Apenas baixe o arquivo em ```.zip``` e extraia para o projeto em Java que for utilizar.
+O sistema possui estrutura de arquivos simples para fácil uso. Apenas baixe o arquivo ```.jar``` na aba _Releases_ no github e referencie ele em seu projeto Java. [Como faço isso?](https://www.alura.com.br/apostila-java-orientacao-objetos/ferramentas-jar-e-javadoc#:~:text=O%20próprio%20Eclipse%20já%20nos,importado%20e%20clicar%20em%20Open.)
+
+### Uso de armazenamento de arquivos
+
+Por padrão, o sistema irá armazenar os históricos de ordens e empresas cadastradas na raíz do projeto. É possível mudar para um caminho relativo da sua máquina:
+
+```Java
+   Corretora.setCaminhoArquivo("C:\\Program Files\\Notas\\Fernando\\Corretoras.txt");
+    	
+   Empresa.setCaminhoArquivo("C:\\Program Files\\Notas\\Fernando\\Empresas.txt");
+```
+
+Lembrando que para cada subpasta deve utilizar ```\\```.
+
+É possível também mudar os caminhos na classe ```LocaisArquivoTexto.java``` para mudança no projeto todo, apenas mude o valor das constantes lá.
 
 ## 🏃‍♀️ O que foi feito até agora?
 

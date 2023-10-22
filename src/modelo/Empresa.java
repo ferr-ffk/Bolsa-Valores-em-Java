@@ -7,6 +7,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import constantes.LocaisArquivoTexto;
+
 /**
  * <p> Uma empresa registrada na bolsa de valores terá componentes básicos de nome, e código. Além de contar
  * com o número de cotas e o valor delas.
@@ -27,7 +29,7 @@ public class Empresa {
 	
 	private TipoAcaoEmpresa tipoAcaoEmpresa;
 
-	private static final String EMPRESAS_TXT = "Empresas.txt";
+	private static String EMPRESAS_TXT = LocaisArquivoTexto.EMPRESAS_TXT_PADRAO;
 
 	/**
 	 * Instancia uma nova empresa e logo registra ela no arquivo de texto.
@@ -48,6 +50,10 @@ public class Empresa {
 		this.tipoAcaoEmpresa = tipoAcaoEmpresa;
 
 		registrarEmpresa(this);
+	}
+	
+	public static void setCaminhoArquivo(String caminho) {
+		EMPRESAS_TXT = caminho;
 	}
 	
 	public int obterNumeroCotas() {

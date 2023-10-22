@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
 
+import constantes.LocaisArquivoTexto;
 import util.Pilha;
 
 /**
@@ -24,7 +25,7 @@ public class Corretora {
 
 	private Integer codigo;
 
-	private static final String HISTORICO_ORDENS_TXT = "HistoricoOrdens.txt";
+	private static String HISTORICO_ORDENS_TXT = LocaisArquivoTexto.HISTORICO_ORDENS_TXT_PADRAO;
 
 	private BufferedReader reader;
 
@@ -41,6 +42,10 @@ public class Corretora {
 	public Corretora(String nome, Integer codigo) {
 		this.nome = nome;
 		this.codigo = codigo;
+	}
+	
+	public static void setCaminhoArquivo(String caminho) {
+		HISTORICO_ORDENS_TXT = caminho;
 	}
 
 	/**

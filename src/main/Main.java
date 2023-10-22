@@ -15,6 +15,10 @@ public class Main {
 
     	Empresa empresa = new Empresa("COMPASS", "PASS5", 100, 120, TipoAcaoEmpresa.ACAO_FII);
     	
+    	Corretora.setCaminhoArquivo("C:\\Program Files\\Notas\\Fernando");
+    	
+    	Empresa.setCaminhoArquivo("C:\\Program Files\\Notas\\Fernando");
+    	
     	corretora.enviarOrdem(empresa.obterAcao(), investidor, empresa);
     	
     	Empresa.exibirEmpresas();
