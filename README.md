@@ -35,11 +35,19 @@ Este projeto simula a bolsa de valores, com todos os aspectos de compra e venda 
 
 ## 🧰 Funcionalidades
 
-O sistema possui modos de compra e ordem de uma ação de uma empresa tal cadastrada no sistema de arquivos.
+O sistema possui modos de compra e ordem de uma ação por um investidor de uma empresa tal cadastrada no sistema de arquivos. Cada investidor tem um saldo disponível ao ser instanciada e será impossibilitado de compra caso não possuir saldo suficiente.
+
+A empresa possui nome popular e código na bolsa de valores, retirados do site oficial da B3. Ao ser instanciada, é entrado o valor de cada cota e o número total delas. Não será possível comprar uma cota se o valor de cotas for zero.
+
+O sistema possui uma biblioteca personalizada de estruturas de dados como Fila, Pilha e Árvore, todas com estratégia encadeada de armazenamento. A classe fila é utilizada para armazenamento de cada papel comprado por um investidor, em sua carteira pessoal; como a pilha é usada para registrar as empresas no ramo de negócios.
+
+## Instalação
+
+O sistema possui estrutura de arquivos simples para fácil uso. Apenas baixe o arquivo em ```.zip``` e extraia para o projeto em Java que for utilizar.
 
 ## 🏃‍♀️ O que foi feito até agora?
 
 - [X] Implementação das entidades de modelo
-- [ ] Implementação das classes de utilidades como Fila, Pilha e Árvore
+- [X] Implementação das classes de utilidades como Fila, Pilha e Árvore
 - [X] Armazenamento das ordens de compra e venda em arquivos ```.txt```
 - [ ] Geração de relatórios
