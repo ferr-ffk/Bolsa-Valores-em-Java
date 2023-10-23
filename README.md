@@ -50,18 +50,29 @@ O sistema possui estrutura de arquivos simples para fácil uso. Apenas baixe o a
 Por padrão, o sistema irá armazenar os históricos de ordens e empresas cadastradas na raíz do projeto. É possível mudar para um caminho relativo da sua máquina:
 
 ```Java
-   Corretora.setCaminhoArquivo("C:\\Program Files\\Notas\\Fernando\\Corretoras.txt");
+Corretora.setCaminhoArquivo("C:\\Program Files\\Notas\\Fernando\\Corretoras.txt");
+```
+
+E o equivalente para a classe Empresa:
     	
-   Empresa.setCaminhoArquivo("C:\\Program Files\\Notas\\Fernando\\Empresas.txt");
+```Java    	
+Empresa.setCaminhoArquivo("C:\\Program Files\\Notas\\Fernando\\Empresas.txt");
 ```
 
 Lembrando que para cada subpasta deve utilizar ```\\```.
 
-É possível também mudar os caminhos na classe ```LocaisArquivoTexto.java``` para mudança no projeto todo, apenas mude o valor das constantes lá.
+É possível também mudar os caminhos na classe ```LocaisArquivoTexto.java``` para mudança no projeto todo, apenas mude o valor das constantes lá:
 
-## 🏃‍♀️ O que foi feito até agora?
+```Java
+public static final String HISTORICO_ORDENS_TXT_PADRAO = "C:\\Program Files\\Notas\\Davi\\Empresas.txt";
+	
+public static final String EMPRESAS_TXT_PADRAO = "C:\\Program Files\\Notas\\Davi\\Empresas.txt";
+```
+
+## 🏃‍♀️ O que será feito no projeto?
 
 - [X] Implementação das entidades de modelo
 - [X] Implementação das classes de utilidades como Fila, Pilha e Árvore
 - [X] Armazenamento das ordens de compra e venda em arquivos ```.txt```
 - [ ] Geração de relatórios
+- [ ] Simulação de flutuação de valores de ações
