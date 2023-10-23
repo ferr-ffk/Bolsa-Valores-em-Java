@@ -1,5 +1,5 @@
 # 💰 Bolsa de Valores
-_Prof° Ugo Henrique Cardoso_
+_Prof° Ugo Henrique Pereira da Silva_
 
 <div style="display: flex; justify-content: center; align-items: center;">
 
