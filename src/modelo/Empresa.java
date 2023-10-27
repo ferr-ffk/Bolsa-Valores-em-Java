@@ -10,8 +10,9 @@ import java.io.IOException;
 import constantes.LocaisArquivoTexto;
 
 /**
- * <p> Uma empresa registrada na bolsa de valores terá componentes básicos de nome, e código. Além de contar
- * com o número de cotas e o valor delas.
+ * <p>
+ * Uma empresa registrada na bolsa de valores terá componentes básicos de nome,
+ * e código. Além de contar com o número de cotas e o valor delas.
  */
 public class Empresa {
 
@@ -22,11 +23,11 @@ public class Empresa {
 	private final String nome;
 
 	private int cotas;
-	
+
 	private float valorCota;
 
 	private String codigo;
-	
+
 	private TipoAcaoEmpresa tipoAcaoEmpresa;
 
 	private static String EMPRESAS_TXT = LocaisArquivoTexto.EMPRESAS_TXT_PADRAO;
@@ -34,9 +35,9 @@ public class Empresa {
 	/**
 	 * Instancia uma nova empresa e logo registra ela no arquivo de texto.
 	 * 
-	 * @param nome O nome da empresa
-	 * @param codigo O código da empresa na bolsa de valores
-	 * @param cotas O número de cotas da empresa
+	 * @param nome      O nome da empresa
+	 * @param codigo    O código da empresa na bolsa de valores
+	 * @param cotas     O número de cotas da empresa
 	 * @param valorCota O valor de cada cota individual da empresa
 	 */
 	public Empresa(String nome, String codigo, int cotas, float valorCota, TipoAcaoEmpresa tipoAcaoEmpresa) {
@@ -51,33 +52,36 @@ public class Empresa {
 
 		registrarEmpresa(this);
 	}
-	
+
 	public static void setCaminhoArquivo(String caminho) {
 		EMPRESAS_TXT = caminho;
 	}
-	
+
 	public int obterNumeroCotas() {
 		return this.cotas;
 	}
-	
+
 	public float obterValorEmpresa() {
 		return this.cotas * valorCota;
 	}
-	
+
 	/**
-	 * <p> O método utilizado para uma eventual ordem de compra de ações dessa empresa.
-	 * <p> Cada empresa possui um número de ações (cotas), além de retirar uma cota dela.
+	 * <p>
+	 * O método utilizado para uma eventual ordem de compra de ações dessa empresa.
+	 * <p>
+	 * Cada empresa possui um número de ações (cotas), além de retirar uma cota
+	 * dela.
 	 * 
 	 * @return uma acao da empresa
 	 */
 	public AbstratoAcao obterAcao() {
 		comprarCotas(cotas);
-		
-		if(tipoAcaoEmpresa == TipoAcaoEmpresa.ACAO_FII) {
+
+		if (tipoAcaoEmpresa == TipoAcaoEmpresa.ACAO_FII) {
 
 			return new AcaoFII("Acao FII", this.valorCota, 0.0f, 0.0f, cotas);
-		} else if(tipoAcaoEmpresa == TipoAcaoEmpresa.ACAO_MERCADO) {
-			
+		} else if (tipoAcaoEmpresa == TipoAcaoEmpresa.ACAO_MERCADO) {
+
 			return new AcaoMercado("Acao Mercado", this.valorCota, this.cotas, this);
 		} else {
 			throw new RuntimeException("Tipo de Acao da empresa nulo!");
@@ -149,8 +153,46 @@ public class Empresa {
 
 	}
 
+	/**
+	 * <p> Busca no arquivo de texto uma empresa correspondente ao indice dado pelo usuário.
+	 * <p> Se não for encontrado, retorna uma string vazia
+	 * 
+	 * @param indice O índice do elemento
+	 * @return A string da empresa
+	 */
+	public static String obterEmpresa(Integer indice) {
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader(new File(EMPRESAS_TXT)));
+
+			String linha;
+
+			if (reader.readLine() == null) {
+				return "Nenhuma empresa cadastrada";
+			}
+
+			while ((linha = reader.readLine()) != null) {
+				String charAt = String.valueOf(linha.charAt(0));
+
+				if (Integer.parseInt(charAt) == indice) {
+					reader.close();
+					return linha;
+				} else {
+					continue;
+				}
+			}
+
+			reader.close();
+			return "Empresa de índice " + indice + " não encontrada!";
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		throw new RuntimeException("Alguma coisa deu errado ne pae");
+	}
+
 	@Override
 	public String toString() {
-		return id + ": {Empresa: " + nome + " \"" + codigo + "\", total de cotas: " + cotas + ", valor da empresa: " + obterValorEmpresa() + "}";
+		return id + ": {Empresa: " + nome + " \"" + codigo + "\", total de cotas: " + cotas + ", valor da empresa: "
+				+ obterValorEmpresa() + "}";
 	}
 }

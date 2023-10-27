@@ -67,6 +67,10 @@ public class Investidor {
 
 		atualizarInvestidor(this);
 	}
+	
+	public static void setCaminhoArquivo(String novoCaminho) {
+			INVESTIDORES_TXT = novoCaminho;
+	}
 
 	private void atualizarInvestidor(Investidor investidor) {
 		try {

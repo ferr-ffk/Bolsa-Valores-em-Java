@@ -1,0 +1,4 @@
+1956836: {Davi Gomes, saldo: 26000.0, acoes: [ ]}
+1935839: {Ugo Henrique, saldo: 13000.0, acoes: [ ]}
+8256245: {Fernando Freitas, saldo: 1000.0, acoes: [ ]}
+4629553: {Gabriel Rocha, saldo: 500.0, acoes: [ ]}
