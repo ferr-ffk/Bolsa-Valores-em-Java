@@ -48,7 +48,7 @@ O sistema possui estrutura de arquivos simples para fácil uso. Apenas baixe o a
 
 ### 📁 Uso de armazenamento de arquivos
 
-Por padrão, o sistema irá armazenar os históricos de ordens e empresas cadastradas na pasta `/registros/ do projeto. É possível alterar para um caminho relativo da sua máquina:
+Por padrão, o sistema irá armazenar os históricos de ordens e empresas cadastradas na pasta `/registros/` do projeto. É possível alterar para um caminho relativo da sua máquina:
 
 ```Java
 Corretora.setCaminhoArquivo("C:\\Program Files\\Notas\\Fernando\\Corretoras.txt");
