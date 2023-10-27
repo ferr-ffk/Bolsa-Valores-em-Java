@@ -14,10 +14,11 @@ Este projeto simula a bolsa de valores, com todos os aspectos de compra e venda 
 
 ## 🧍 Autores
 
-| Integrante               | Funcionalidade       |
-|:------------------------:|:--------------------:|
-| Fernando Freitas de Lira | Classes de modelo    |
-| Davi Gomes de Sousa      | Classes de utilidade |
+| Integrante               | Funcionalidade          |
+|:------------------------:|:-----------------------:|
+| Fernando Freitas de Lira | Classes de modelo       |
+| Davi Gomes de Sousa      | Classes de utilidade    |
+| Francine Midori          | Gestão geral do projeto |
 
 ## 📖 Ferramentas e Bibliotecas utilizadas
 

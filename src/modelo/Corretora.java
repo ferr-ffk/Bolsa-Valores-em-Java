@@ -70,7 +70,7 @@ public class Corretora {
 
 			int id;
 
-			if (idChar.equals(null)) {
+			if (idChar == null) {
 				id = idBase++;
 			} else {
 				String linha;
