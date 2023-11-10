@@ -1,9 +1,0 @@
-
-0: {Empresa: BCO BRADESCO S.A. "BBDC4", total de cotas: 100}
-1: {Empresa: BCO SANTANDER (BRASIL) S.A. "SANB11", total de cotas: 120}
-2: {Empresa: SEQUOIA LOGISTICA E TRANSPORTES S.A "SEQL3", total de cotas: 130}
-3: {Empresa: AIRBNB INC "AIRBNB", total de cotas: 300}
-4: {Empresa: FERROVIA CENTRO-ATLANTICA S.A. "VSPT4", total de cotas: 80}
-5: {Empresa: RUMO MALHA NORTE S.A. "FRRN5B", total de cotas: 30}
-6: {Empresa: AIRBNB INC "AIRBNB", total de cotas: 300}7: {Empresa: COMPASS "PASS5", total de cotas: 100, valor da empresa: 12000.0}
-7: {Empresa: COMPASS "PASS5", total de cotas: 100, valor da empresa: 12000.0}
