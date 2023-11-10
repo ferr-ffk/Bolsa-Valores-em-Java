@@ -1,4 +1,0 @@
-
-0: Ordem : {(Acao): Nome tal, R$19,90} enviada para {Davi Gomes, saldo: 8010.0, acoes: [ {(Acao): Nome tal, R$19,90} ]}
-1: Ordem : {(Acao): Nome qualquer, R$29,90} enviada para {Mr. Rocha, saldo: 9103.0, acoes: [ {(Acao): Nome qualquer, R$29,90} ]}
-2: Ordem : {(Acao): BBDC, R$56,90} enviada para {Fernando Freitas, saldo: 3172.0, acoes: [ {(Acao): BBDC, R$56,90} ]}
