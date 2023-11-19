@@ -65,9 +65,9 @@ Lembrando que para cada subpasta deve utilizar ```\\```.
 É possível também mudar os caminhos na classe ```LocaisArquivoTexto.java``` para mudança no projeto todo, apenas mude o valor das constantes lá:
 
 ```Java
-public static final String HISTORICO_ORDENS_TXT_PADRAO = "C:\\Program Files\\Notas\\Davi\\Empresas.txt";
+public static final String HISTORICO_ORDENS_SER_PADRAO = "C:\\Program Files\\Notas\\Davi\\Empresas.txt";
 	
-public static final String EMPRESAS_TXT_PADRAO = "C:\\Program Files\\Notas\\Davi\\Empresas.txt";
+public static final String EMPRESAS_SER_PADRAO = "C:\\Program Files\\Notas\\Davi\\Empresas.txt";
 ```
 
 ## 🏃‍♀️ O que será feito no projeto?
